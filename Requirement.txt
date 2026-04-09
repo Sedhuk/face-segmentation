@@ -1,0 +1,167 @@
+Project Title Real-Time Face Segmentation for Movie Cast
+
+Identification
+
+Skills take away
+
+From This Project
+
+Python, Computer Vision, OpenCV, Streamlit
+
+Domain Entertainment
+
+Problem Statement:
+
+Scene Cast AI: Real-Time Face Segmentation for Movie Cast Identification. Company X's
+
+streaming app needs to automatically detect and segment faces in movie scene screenshots so
+
+users can pause videos and instantly view cast/crew details for actors on screen.
+
+Business Domain Value
+
+• Pause-and-identify feature: Users pause movies to see actor names/profiles overlayed on
+
+detected faces.
+
+• Personalized recommendations: Track viewer preferences for specific actors across films.
+
+• Content moderation: Automatically flag inappropriate scenes via face detection.
+
+• Advertising: Dynamic ads featuring favourite actors during streaming breaks.
+
+Approach:
+
+1. Pre-Processing, Data Visualization, EDA:
+
+• Load dataset of movie scene images and corresponding binary face masks.
+
+• Preprocess: Resize to 256x256, augment (flip/rotate) for varied poses/lighting.
+
+2. Model Building:
+
+• Build U-Net model with MobileNetV2 encoder (transfer learning), custom decoder
+
+with skip connections.
+
+• Train the mode
+
+• Implement custom Dice Coefficient metric and Dice Loss function.
+
+• To deal with large training time, save the weights so that you can use them when
+
+training the model for the second time without starting from scratch.
+
+3. Test the Model, Fine-tuning and Repeat:
+
+• Test the model and report as per evaluation metrics
+
+• Try different models
+
+• Set different hyper parameters, by trying different optimizers, loss functions,
+
+epochs, learning rate, batch size, checkpointing, early stopping etc. for these
+
+models to fine-tune them
+
+• Report evaluation metrics for these models along with your observation on how
+
+changing different hyper parameters leads to change in the final evaluation metric
+
+4. Deployment:
+
+• Integrating the trained model into a Streamlit-based web application.
+
+• Providing an interface where users can upload images or use real-time webcam
+
+feeds for detection.
+
+Streamlit Integration:
+
+To ensure user-friendly access to the model, a Streamlit-based web application is developed with
+
+the following features:
+
+• Image Upload:
+
+Users can upload images.
+
+• Download & Export:
+
+Users can download detection logs for future reference.
+
+• Performance Dashboard:
+
+Displays key metrics such as processing time, detection accuracy, and
+
+confidence scores.
+
+Deployment (Completely Optional):
+
+Try to deploy it on any platforms like Hugging Face, AWS, Azure etc.
+
+Project Evaluation Metrics:
+
+Below matrix should be used for the evaluation
+
+• Dice Coefficient (>0.92): Measures mask overlap precision.
+
+• IoU (>0.88): Intersection over Union for segmentation quality.
+
+• Inference Speed (<100ms/image): Real-time app performance.
+
+• F1-Score (>0.90): Balances precision/recall for face detection.
+
+While we encourage peer collaboration and contribution, plagiarism, copying the code
+
+from other sources or peers will defeat the purpose of coming to this program. We
+
+expect the highest order of ethical behaviour.
+
+Data: https://drive.google.com/drive/folders/1dBLCTJUU8DR8sHbjCESPafETLVWJ-z5S?usp=sharing
+
+Results:
+
+Learners should achieve Dice Coefficient >0.92 on validation set, with real-time inference
+
+(<100ms/image) and accurate face masks even in crowded/complex movie scenes. Model ready
+
+for Streamlit app integration showing overlaid bounding boxes
+
+Technical Tags:
+
+• Python
+
+• OpenCV
+
+• Streamlit
+
+• Deep Learning: YOLO object detection model.
+
+• Computer Vision: OpenCV for preprocessing and visualization.
+
+• OCR Technology: Tesseract/EasyOCR for text recognition.
+
+• Web Application: Streamlit for interactive deployment.
+
+• Python Libraries: NumPy, Pandas, Matplotlib, Seaborn, TensorFlow/PyTorch.
+
+• Image Processing: Includes resizing, contrast enhancement, and edge detection
+
+techniques.
+
+Project Deliverables:
+
+• Jupiter notebook with EDA, model training, evaluation.
+
+• Trained U-Net model weights (.h5).
+
+• Custom Dice loss/metric functions.
+
+• Streamlit demo app with image upload and mask visualization.
+
+• Performance report (metrics table, sample predictions).
+
+• GitHub repository with README and requirements.txt.
+
+• 2-minute demo video.
